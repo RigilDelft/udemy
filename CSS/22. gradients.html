@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gradients</title>
+        <style>
+            .bluebox {
+                color: white;
+                height: 100px;
+                width: auto;
+                background: linear-gradient(to left, rgba(0, 0, 255, 0), rgba(0, 0, 255, 1));
+                background: -webkit-linear-gradient(blue, white);
+                background: -o-linear-gradient(blue, white);
+                background: -moz-linear-gradient(blue, white);
+            }
+            .yellowbox {
+                background-color: rgb(222, 224, 85);
+                height: 100px;
+                width: auto;
+                background: radial-gradient(circle, blue 5%, white 15%, orange 80%);
+                background: -webkit-radial-gradient(circle, blue 5%, white 15%, orange 80%);
+                background: -o-radial-gradient(circle, blue 5%, white 15%, orange 80%);
+                background: -moz-radial-gradient(circle, blue 5%, white 15%, orange 80%);
+            }
+            .greenbox {
+                background-color: #31af37;
+                height: 100px;
+                width: auto;
+            }
+            .great {
+                background-color: #5a3479;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bluebox">
+            <p>Facebook is <span class="great">great</span>.</p>
+        </div>
+        <div class="yellowbox">
+            <p>Apple.</p>
+        </div>
+        <div class="greenbox">
+            <p>Microsoft.</p>
+        </div>
+    </body>
+</html>
