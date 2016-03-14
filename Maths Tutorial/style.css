@@ -1,14 +1,19 @@
+h1 a {
+    font-size: 50px;
+    font-weight: 100;
+    color: #861bbf;
+    text-decoration: none;
+}
+
 #container {
     width: 1050px;
     border: 1px solid grey;
     margin: 0 auto;
 }
 
-h1 a {
-    font-size: 50px;
-    font-weight: 100;
-    color: #861bbf;
-    text-decoration: none;
+#header {
+    height: 100px;
+    padding: 10px 0;
 }
 
 #brand {
@@ -17,4 +22,31 @@ h1 a {
 
 #searchBox {
     float: right;
+    background: linear-gradient(#e4f2b9, #b7e953);
+    width: 400px;
+    height: 50px;
+    padding: 20px 20px 0 20px;
+    margin-top: 20px;
+}
+
+.text {
+    float: left;
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    color: #e36a0c;
+    background: white url(images/search.png) right center no-repeat;
+}
+
+.submit {
+    float: right;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background: #a751d6;
+}
+
+.clear {
+    clear: both;
 }
