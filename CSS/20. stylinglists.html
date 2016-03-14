@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Styling lists</title>
+        <style>
+            ul.list1 {
+/*                list-stye: square;*/
+/*                list-stye: lower-roman;*/
+/*                list-stye: upper-roman;*/
+                list-style-image: url(images/11%20March.jpg);
+            }
+            ul.list2 {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            ul.list2 li {
+                background-image: url(images/14%20March.jpg);
+                background-repeat: no-repeat;
+                background-position: 0px center;
+                padding-left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>A list of European capitals</p>
+        <ul class="list1">
+            <li>Paris</li>
+            <li>London</li>
+            <li>Madrid</li>
+        </ul>
+        <p>A list of European capitals</p>
+        <ul class="list2">
+            <li>Paris</li>
+            <li>London</li>
+            <li>Madrid</li>
+        </ul>
+    </body>
+</html>
