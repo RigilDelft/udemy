@@ -128,11 +128,11 @@ ul {
 
 #leftsidebar ul li {
     padding: 4x 0 4px 10px;
-    list-style-image: url(images/arrow.png);
+    background: url(images/arrow.png) no-repeat left center;
 }
 
 #rightsidebar ul li {
-    padding: 17x 0 17px 70px;
+    padding: 10px 0 10px 46px;
     background: url(images/checkmark.png) no-repeat left center;
 }
 
