@@ -122,14 +122,18 @@ ul {
     font-size: 30px;
 }
 
-#leftsidebar ul {
+#sidebar ul {
     padding-top: 8px;
 }
 
 #leftsidebar ul li {
-    padding-bottom: 6px;
-    padding-left: 10px;
+    padding: 4x 0 4px 10px;
     list-style-image: url(images/arrow.png);
+}
+
+#rightsidebar ul li {
+    padding: 17x 0 17px 70px;
+    background: url(images/checkmark.png) no-repeat left center;
 }
 
 .sidebar ul li a {
