@@ -44,9 +44,9 @@
             }
             document.getElementById("button2").onclick = function() {
                 var x, y, z, appleColor;
-                x = Math.round(Math.random()*256);
-                y = Math.round(Math.random()*256);
-                z = Math.round(Math.random()*256);
+                x = Math.floor(Math.random()*256);
+                y = Math.floor(Math.random()*256);
+                z = Math.floor(Math.random()*256);
                 appleColor = 'rgb(' + x + ',' + y + ',' + z + ')';
                 document.getElementById("apple").style.backgroundColor = appleColor;
                 document.getElementById("apple").innerHTML = '<p>' + appleColor + '</p>';
