@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+    </head>
+    <body>
+        <p>Javascript. Check console.log.</p>
+        <script>
+            var myPhone = {
+                make: "Apple",
+                model: "iPhone 4",
+                warranty: 12,
+                color: "white"
+            };
+            window.console.log(myPhone);
+            delete myPhone.warranty;
+            window.console.log(myPhone);
+            window.console.log(myPhone.model);
+            var myOtherPhone = myPhone;
+            window.console.log(myOtherPhone);
+            myOtherPhone.model = "iPhone 5";
+            window.console.log(myOtherPhone);
+            window.console.log(myPhone);
+        </script>
+    </body>
+</html>
