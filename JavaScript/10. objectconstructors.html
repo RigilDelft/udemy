@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Object Constructors</title>
+    </head>
+    <body>
+        <p>Javascript. Check console.log.</p>
+        <script>
+            function phone(make, model, warranty, color) {
+                this.make = make;
+                this.model = model;
+                this.warranty = warranty;
+                this.color = color;
+                
+                this.extendWarranty = function(x) {
+                    this.warranty += x;
+                }
+            }
+            
+            var myPhone = new phone("Apple", "iPhone 5", 12, "white");
+            window.console.log(myPhone);
+            myPhone.extendWarranty(12);
+            window.console.log(myPhone.warranty);
+            
+            myPhone.condition = "like new";
+            window.console.log(myPhone.condition);
+            
+            var myBrothersPhone = new phone("Samsung", "Galaxy S6", 36, "grey");
+            window.console.log(myBrothersPhone);
+            window.console.log(myBrothersPhone.condition);
+            phone.protytype.condition = "new";
+            window.console.log(myBrothersPhone.condition);
+            window.console.log(myPhone.condition);
+        </script>
+    </body>
+</html>
