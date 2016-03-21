@@ -18,7 +18,7 @@
             }
             .greenbox {
                 background-color: #31af37;
-                height: 200px;
+                height: auto;
                 width: auto;
             }
             .great {
@@ -27,6 +27,11 @@
         </style>
     </head>
     <body>
+        <button id="changeFacebook">Change Facebook text</button>
+        <button id="changeApple">Change Apple HTML</button>
+        <button id="changeInput">Change Input value</button>
+        <button id="changeMicrosoft">Change Microsoft Link</button>
+        <button id="addText">Add text</button>
         <div class="bluebox" id="facebook">
             <p>Facebook is <span class="great">great</span>.</p>
         </div>
@@ -34,14 +39,10 @@
             <p>Apple.</p>
         </div>
         <div class="greenbox" id="microsoft">
-            <p>Microsoft.</p>
+            <p id="microsoftParagraph">Microsoft.</p>
             <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link</a></p>
         </div>
         <p>Enter your name: <input></p>
-        <button id="changeFacebook">Change Facebook text</button>
-        <button id="changeApple">Change Apple HTML</button>
-        <button id="changeInput">Change Input value</button>
-        <button id="changeMicrosoft">Change Microsoft Link</button>
         <script>
             $(function(){
                 $("#changeFacebook").click(function(){
@@ -55,6 +56,11 @@
                 });
                 $("#changeMicrosoft").click(function(){
                     $("#microsoftLink").attr({"href": "http://www.google.com", "title": "Google"}); 
+                });
+                $("#addText").click(function(){
+                    $("#microsoft").append("<ul><li>BMW</li>Audi<li></li>Mercedes<li></li></ul>");
+                    $("#microsoft").prepend("<ul><li>BMW</li>Audi<li></li>Mercedes<li></li></ul>");
+                    $("#microsoftParagraph").after("<ul><li>BMW</li>Audi<li></li>Mercedes<li></li></ul>");
                 });
             });
         </script>
