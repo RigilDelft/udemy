@@ -27,6 +27,7 @@
         </style>
     </head>
     <body>
+        <button>Button</button>
         <div class="bluebox" id="facebook">
             <p>Facebook is <span class="great" id="great">great</span></p>
         </div>
@@ -40,7 +41,22 @@
         <p>Enter your name: <input></p>
         <script>
             $(function(){
-
+                $("#facebook").load("ajax/somedata.txt");
+                $("#apple").load("ajax/somedata.txt #paragraph1");
+//                $("button").click(function(){
+//                    $.ajax({
+//                        url: "ajax/somedata.txt",
+//                        succes: function(data){
+//                            $("#microsoft").html(data);
+//                        }
+//                    });
+//                });
+                $("button").click(function(){
+                    $.ajax({
+                        url: "ajax/somedata.txt"}).done(function(data){
+                            $("#microsoft").html(data);
+                        }); 
+                });
             });
         </script>
     </body>
