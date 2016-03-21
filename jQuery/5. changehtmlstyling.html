@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Change HTML styling</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <style>
+            .bluebox {
+                background-color: #3a5795;
+                color: white;
+                height: 200px;
+                width: 300px;
+            }
+            .yellowbox {
+                background-color: rgb(222, 224, 85);
+                height: 200px;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #31af37;
+                height: auto;
+                width: auto;
+            }
+            .great {
+                background-color: #5a3479;
+            }
+            .sans-serif {
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="changeFacebook">Change Facebook</button>
+        <button id="changeApple">Change Apple</button>
+        <div class="bluebox" id="facebook">
+            <p>Facebook is <span class="great">great</span>.</p>
+        </div>
+        <div class="yellowbox sans-serif" id="apple">
+            <p>Apple.</p>
+        </div>
+        <div class="greenbox" id="microsoft">
+            <p id="microsoftParagraph">Microsoft.</p>
+            <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link</a></p>
+        </div>
+        <p>Enter your name: <input></p>
+        <script>
+            $(function(){
+                $("#changeFacebook").click(function(){
+                    $("#facebook").css("width", 100*Math.random()-50 + $("#facebook").width()));
+                    $("#facebook").addClass("greenbox");
+//                    window.alert($("#facebook").innerHeight);
+//                    window.alert($("#facebook").outerHeight);
+                });
+                $("#changeApple").click(function(){
+                    $("#apple").removeClass("yellowbox");
+                });
+                $("#apple").click(function(){
+                    $("#apple").removeClass("yellowbox");
+                });
+            });
+        </script>
+    </body>
+</html>
