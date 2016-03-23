@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Selectable</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/sunny/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <style>
+            .bluebox {
+                background-color: #3a5795;
+                color: white;
+                height: 200px;
+                width: 300px;
+            }
+            .yellowbox {
+                background-color: rgb(222, 224, 85);
+                height: auto;
+                width: auto;
+                padding: 10px;
+            }
+            .greenbox {
+                background-color: #31af37;
+                height: auto;
+                width: auto;
+            }
+            .great {
+                background-color: #5a3479;
+            }
+            li {
+                font-size: 2em;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+            #list .ui-selecting {
+                background: #740da0;
+            }
+            #list .ui-seleced {
+                background: #953ebb;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bluebox ui-corner-all" id="facebook">
+            <p>Facebook is <span class="great" id="great">great</span></p>
+        </div>
+        <div class="yellowbox ui-corner-all" id="apple">
+            <ul id="list">
+                <li class="ui-state-default">Audi</li>
+                <li class="ui-state-default">BMW</li>
+                <li class="ui-state-default">Mercedes</li>
+            </ul>
+        </div>
+        <div class="greenbox ui-corner-all" id="microsoft">
+            <p id="microsoftParagraph">Microsoft.</p>
+            <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link</a></p>
+        </div>
+        <script>
+            $(function(){
+                $("#list").selectable({
+                    stop: function() {
+                        $(".ui-selected").each(function() {
+                            $("<p></p>").text($(this).text()).appendTo("#microsoft");
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
