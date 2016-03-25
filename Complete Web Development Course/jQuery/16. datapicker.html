@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Datapicker</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/sunny/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <style>
+            .bluebox {
+                background-color: #3a5795;
+                color: white;
+                height: 200px;
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(222, 224, 85);
+                height: auto;
+                width: 200px;
+                padding: 10px;
+            }
+            .greenbox {
+                background-color: #31af37;
+                height: 200px;
+                width: auto;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bluebox ui-corner-all" id="facebook">
+            <p>Flight departure data: <input id="departure"></p>
+            <p>Flight return date: <input id="return"></p>
+        </div>
+        <div class="yellowbox ui-corner-all" id="apple">
+            <p>Apple</p>
+        </div>
+        <div class="greenbox ui-corner-all" id="microsoft">
+            <p>Microsoft</p>
+        </div>
+        <script>
+            $(function(){
+                $("#departure").datepicker({
+                    showAnim: "slideDown",
+                    changeYear: true,
+                    numberOfMonths: 1,
+                    dateFormat: "dd MM yy",
+                    showOn: "button",
+                    buttonImage: "images/calendar.png",
+                    buttonImageOnly: true,
+                    buttonText: "Choose your departure date",
+                    minDate: +1,
+                    maxDate: "+12M +10D",
+                    onClose: function(selectedDate) {
+                        $("#return").datepicker("option", "minDate", selectedDate)
+                    },
+                    showWeek: true
+                });
+                $("#return").datepicker({
+                    dateFormat: "dd MM yy"
+                });
+            });
+        </script>
+    </body>
+</html>
